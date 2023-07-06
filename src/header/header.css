@@ -1,0 +1,81 @@
+.header {
+  padding: 0;
+  /* position: relative; */
+}
+.header .container {
+  margin-top: 40px;
+  width: 50vw;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 2px 14px -5px rgba(0, 0, 0, 25);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  font-family: "Devonshire", cursive;
+  font-size: xx-large;
+  border-radius: 7px;
+}
+
+.header .logo a {
+  color: black;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.header .a {
+  color: black;
+  font-size: 1.25rem;
+
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.header a:hover {
+  opacity: 0.7;
+}
+.header .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header .nave {
+  display: flex;
+  justify-content: space-between;
+}
+.header .nave li {
+  margin-left: 40px;
+  font-family: "Agdasima", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.header .nave li a {
+  display: inline-block;
+}
+
+@media (max-width: 575px) {
+  .header .nave li {
+    margin-left: 10px;
+  }
+  .btn {
+    width: 40px;
+    font-size: 1rem;
+  }
+}
+/* @media (min-width:580px){
+    .header .nave li{
+        margin-left: 4px;  
+    }
+    .btn {
+        width: 40px;
+        font-size: .5rem; 
+    }
+  } */
+.header .nave li .active {
+  border-bottom: 5px solid lawngreen;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 0.5s ease;
+}
+.header .container .nave li .a:hover {
+  color: lawngreen;
+}
