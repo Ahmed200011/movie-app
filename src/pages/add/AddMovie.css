@@ -1,11 +1,12 @@
 
 .add-movie{
-  padding: 50px 0;
-  max-width: 600px;
+  padding: 5px 0;
+ width: 100%;
   margin: 0 auto;
 }
 .add-movie .container{
   margin: auto;
+  width: 90%;
   padding: 0;
 }
 
@@ -13,17 +14,20 @@
   padding: 15px 0 0;
   margin-top: 10px;
   width: 50%;
+  margin-left: 13%;
 }
 .form__field {
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid gray;
+  /* border-bottom: 2px solid gray; */
+  border:2px solid gray;
+  /* border-right:2px solid gray; */
   outline: 0;
   font-size: 1.3rem;
   color: rgb(7, 7, 7);
   padding: 7px 0;
-  background: transparent;
+  background-color:rgba(0, 213, 255, 0.116) ;
   transition: border-color 0.2s;
   margin-left: 155px;
   text-align: center;
@@ -41,6 +45,95 @@
 .result{
   padding: 0;
   margin: 0;
-  margin-top: 10px
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+
+.curd {
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 0px;  
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+   width: 360px;
+  height: 400px;
+}
+
+.curd .wrapper {
+  width: 350px;
+  height: 400px;
+  
+}
+.curd .wrapper .img {
+  margin: 10px;
+  width: 275px;
+  height: 278px;
+  border-radius: 4px;
+  
+}
+
+
+.curd .wrapper h1{
+  font-family: 'Righteous', sans-serif;
+  color: rgba(255,255,255,0.98);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+ .curd .wrapper p {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 150%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.button-wrapper{
+  margin: 18px 50px;
+}
+
+.btn2 {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+}
+
+.btn2 + .btn2 {
+  margin-left: 15px;
+}
+
+
+
+.fill {
+  background: rgba(0, 212, 255, 0.9);
+  color: rgba(255,255,255,0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all .5s ease; 
+}
+
+.fill:hover{
+  transform: scale(1.125);  
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  transition: all .5s ease;    
+}

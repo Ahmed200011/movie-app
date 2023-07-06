@@ -47,10 +47,10 @@
   font-family: "Agdasima", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
-}
-.header .nave li a {
   display: inline-block;
 }
+/* .header .nave li a {
+} */
 
 @media (max-width: 575px) {
   .header .nave li {
@@ -71,11 +71,11 @@
     }
   } */
 .header .nave li .active {
-  border-bottom: 5px solid lawngreen;
+  border-bottom: 5px solid rgba(0, 212, 255, 0.9);
   width: 100%;
   border-radius: 2px;
   transition: all 0.5s ease;
 }
 .header .container .nave li .a:hover {
-  color: lawngreen;
+  color: rgba(0, 212, 255, 0.9);
 }
