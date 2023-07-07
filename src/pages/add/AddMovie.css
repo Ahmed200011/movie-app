@@ -103,8 +103,8 @@
   text-transform: uppercase;
 }
 
-.button-wrapper{
-  margin: 18px 50px;
+.btn2{
+  margin: 18px 1px;
 }
 
 .btn2 {
@@ -118,7 +118,7 @@
 }
 
 .btn2 + .btn2 {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 
@@ -136,4 +136,11 @@
   border-color: rgba(255, 255, 255, 0.9);
   filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
   transition: all .5s ease;    
+}
+
+.noMovies{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
 }
