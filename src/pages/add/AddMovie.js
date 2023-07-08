@@ -45,15 +45,19 @@ const AddMovie = () => {
               {movies.map((movie) => {
                 const storemovie = movieContext.watchlist.find(
                   (o) => o.imdbID === movie.imdbID
-                  );
-                
+                );
+
                 const storemoviewatched = movieContext.watched.find(
                   (o) => o.imdbID === movie.imdbID
                 );
-              
-                const watchListDisabled=storemovie?true:storemoviewatched?true:false;
-                const watchedDisabled=storemoviewatched?true:false;
-                
+
+                const watchListDisabled = storemovie
+                  ? true
+                  : storemoviewatched
+                  ? true
+                  : false;
+                const watchedDisabled = storemoviewatched ? true : false;
+
                 return (
                   <li key={movie.imdbID}>
                     <div className="curd">
@@ -109,7 +113,7 @@ const AddMovie = () => {
             </ul>
           ) : (
             <div className="noMovies">
-              <h1>loading.....</h1>
+              <h1>Search to find a movie</h1>
             </div>
           )}
         </div>

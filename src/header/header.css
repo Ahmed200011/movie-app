@@ -1,6 +1,5 @@
 .header {
   padding: 0;
-  /* position: relative; */
 }
 .header .container {
   margin-top: 40px;
@@ -14,7 +13,7 @@
   align-items: center;
   font-family: "Devonshire", cursive;
   font-size: xx-large;
-  border-radius: 7px;
+  border-radius: 14px;
 }
 
 .header .logo a {
@@ -41,6 +40,7 @@
 .header .nave {
   display: flex;
   justify-content: space-between;
+  font-family: "Agdasima", sans-serif;
 }
 .header .nave li {
   margin-left: 40px;
@@ -49,9 +49,12 @@
   font-weight: 400;
   display: inline-block;
 }
-/* .header .nave li a {
-} */
 
+.btn {
+  font-family: "Agdasima", sans-serif;
+  font-size: 1.2rem;
+  border-radius: 14px;
+}
 @media (max-width: 575px) {
   .header .nave li {
     margin-left: 10px;
@@ -59,17 +62,10 @@
   .btn {
     width: 40px;
     font-size: 1rem;
+    font-family: "Agdasima", sans-serif;
   }
 }
-/* @media (min-width:580px){
-    .header .nave li{
-        margin-left: 4px;  
-    }
-    .btn {
-        width: 40px;
-        font-size: .5rem; 
-    }
-  } */
+
 .header .nave li .active {
   border-bottom: 5px solid rgba(0, 212, 255, 0.9);
   width: 100%;
