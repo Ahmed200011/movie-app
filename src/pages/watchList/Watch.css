@@ -1,0 +1,131 @@
+.watch-movie {
+  padding: 5px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+.watch-movie .container {
+  margin: auto;
+  width: 90%;
+  padding: 0;
+}
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 40px auto;
+  font-family: "Agdasima", sans-serif;
+  color: aliceblue;
+  font-size: 30px;
+}
+
+.movie-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+.watch-movie .container .curd {
+  position: relative;
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 0px;
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 360px;
+  height: 400px;
+  margin-bottom: 40px;
+}
+
+.curd .wrapper {
+  width: 350px;
+  height: 400px;
+}
+.curd .wrapper .img {
+  margin: -1px 0 0 -5px;
+  width: 360px;
+  height: 278px;
+  border-radius: 14px 14px 0 0;
+}
+
+.curd .wrapper h1 {
+  font-family: "Righteous", sans-serif;
+  color: rgba(255, 255, 255, 0.98);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.curd .wrapper p {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 150%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.curd:hover {
+  box-shadow: 0px 0px 12px 3px wheat;
+}
+.watch-movie .container .button-wrapper{
+  position: absolute;
+  bottom: -36px; 
+  display: none;
+}
+.watch-movie .container .curd:hover .button-wrapper {
+  display: inline;
+}
+.btn2 {
+  margin: 18px 1px;
+}
+
+.btn2 {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.btn2 + .btn2 {
+  margin-left: 10px;
+}
+
+.fill {
+  background: rgba(0, 212, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.fill:disabled,
+.fill[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.fill:hover {
+  transform: scale(1.125);
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+  transition: all 0.5s ease;
+}
+
+.noMovies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}

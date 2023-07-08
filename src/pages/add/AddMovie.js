@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./AddMovie.css";
 import axios from "axios";
 import { useMovieContext } from "../../context/Conte";
-import * as actions from "../../context/ActionTyps"
+import * as actions from "../../context/ActionTyps";
 const AddMovie = () => {
-  const movieContext=useMovieContext()
+  const movieContext = useMovieContext();
   const [input, setinput] = useState("");
   const [movies, setmovies] = useState([]);
+
   useEffect(() => {
     // `http://www.omdbapi.com/?s=${input}8&apikey=5ece9b0e`
     //
@@ -42,6 +43,17 @@ const AddMovie = () => {
           {movies.length > 0 ? (
             <ul className="result">
               {movies.map((movie) => {
+                const storemovie = movieContext.watchlist.find(
+                  (o) => o.imdbID === movie.imdbID
+                  );
+                
+                const storemoviewatched = movieContext.watched.find(
+                  (o) => o.imdbID === movie.imdbID
+                );
+              
+                const watchListDisabled=storemovie?true:storemoviewatched?true:false;
+                const watchedDisabled=storemoviewatched?true:false;
+                
                 return (
                   <li key={movie.imdbID}>
                     <div className="curd">
@@ -66,12 +78,30 @@ const AddMovie = () => {
                     </div>
 
                     <div className="button-wrapper">
-                      <button onClick={()=>movieContext.moviesDispatch(
-                        {type:actions.ADD_MOVIE_TO_WATCHLIST,payload:movie}
-                      )} className="btn2 fill">add to watchlist</button>
-                      <button onClick={()=>movieContext.moviesDispatch(
-                          {type:actions.ADD_MOVIE_TO_WATCHED,payload:movie}
-                      )} className="btn2 fill">add to watched</button>
+                      <button
+                        onClick={() =>
+                          movieContext.moviesDispatch({
+                            type: actions.ADD_MOVIE_TO_WATCHLIST,
+                            payload: movie,
+                          })
+                        }
+                        className="btn2 fill"
+                        disabled={watchListDisabled}
+                      >
+                        add to watchlist
+                      </button>
+                      <button
+                        onClick={() =>
+                          movieContext.moviesDispatch({
+                            type: actions.ADD_MOVIE_TO_WATCHED,
+                            payload: movie,
+                          })
+                        }
+                        className="btn2 fill"
+                        disabled={watchedDisabled}
+                      >
+                        add to watched
+                      </button>
                     </div>
                   </li>
                 );
@@ -79,7 +109,6 @@ const AddMovie = () => {
             </ul>
           ) : (
             <div className="noMovies">
-          
               <h1>loading.....</h1>
             </div>
           )}
